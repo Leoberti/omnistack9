@@ -4,7 +4,7 @@ import User from '../models/User';
 
 import authConfig from '../../config/auth';
 
-class SessionControler {
+class SessionController {
   async store(req, res) {
     const { email, password } = req.body;
 
@@ -13,7 +13,6 @@ class SessionControler {
         email,
       },
     });
-
     if (!user) {
       return res.status(401).json({
         error: 'User not found',
@@ -46,4 +45,4 @@ class SessionControler {
   }
 }
 
-export default new SessionControler();
+export default new SessionController();
