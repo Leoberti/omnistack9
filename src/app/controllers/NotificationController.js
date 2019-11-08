@@ -34,8 +34,8 @@ class NotificationController {
       { read: true },
       { new: true }
     );
-    return res.json(notification)
+    return res.json(notification);
   }
 }
 
-export default new NotificationController(); 
+export default new NotificationController();
